@@ -1,0 +1,29 @@
+PROCEDURE swap(VAR xp, VAR yp : INTEGER)
+var
+   tmp : INTEGER;
+begin
+  tmp := xp;
+  xp := yp;
+  yp := tmp;
+end
+ALGORITHM sorting
+var
+    
+    i,j : INTEGER;
+    arr : array-OF INTEGER;
+
+begin
+    write("entrer les elements de array");
+    for (i from 0 to arr.length): INTEGER
+        read (arr[i]);   
+    end for
+      n:= arr.length ;
+    for (i from 0 to arr.length-2): INTEGER
+        for (j  FROM 0  TO n-i-2)
+           if (arr[j]>arr[j+1]) then
+               swap(tab[j], tab[j+1])
+           end if
+        end for
+    end for
+
+end
